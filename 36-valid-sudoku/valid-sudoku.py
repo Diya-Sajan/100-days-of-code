@@ -25,20 +25,19 @@ class Solution(object):
 
     #check rows
     for i in range(0,9):
-        row = check(board[i])
-        if (row==False):
+        if not check(board[i]):
             return False
+    
     #check columns
-    for i in range(0, 9):
-        col = [board[j][i] for j in range(9)]  # Extract column values
-        if not check(col):
+    transposed_board = [[board[j][i] for j in range(9)] for i in range(9)]
+    for i in range(0,9):
+        if not check(transposed_board[i]):
             return False
 
     #check for blocks
     for i in range (0,9):
         block = getblock(board,i)
-        blo = check(block)
-        if (blo==False):
+        if not check(block):
             return False       
 
 
