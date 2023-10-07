@@ -6,8 +6,8 @@ class Solution(object):
         high = [1]
         count=1
         if (len(nums)==0):
-            count = 0
-            high = []
+            return 0
+
 
         for i in range(0,len(nums)-1):
             if (nums[i]+1== nums[i+1]):
@@ -21,9 +21,7 @@ class Solution(object):
         high = set(high)
         high = sorted(high)
         
-        if (len(high)!= 0):
-             return high[-1] 
-        else:
-            return 0  
+        return high[-1] 
+
 
         
