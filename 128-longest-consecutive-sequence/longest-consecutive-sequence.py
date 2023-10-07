@@ -1,12 +1,11 @@
 class Solution(object):
     def longestConsecutive(self,nums):
-        nums = set(nums)
-        nums = sorted(nums)
-        nums = list(nums)
-        
         if (len(nums)==0):
             return 0
-            
+
+        nums = sorted(set(nums))
+        nums = list(nums)
+                    
         high = [1]
         count=1
         
