@@ -2,7 +2,9 @@ class Solution(object):
     def containsDuplicate(self,nums):
 
         a = len(nums)
-        b = len(set(nums))
+        nums = set(nums)
+        nums = list(nums)
+        b = len(nums)
         if(a==b):
             return False
         else:
