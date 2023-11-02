@@ -6,13 +6,4 @@ class Solution(object):
             return True
         else:
             return False
-
-
-
-
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
          
