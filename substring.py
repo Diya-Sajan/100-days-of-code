@@ -1,4 +1,4 @@
-def UncommonChars(s, x):
+def strstr(s, x):
     a = [*s]
     b = [*x]
 
@@ -10,10 +10,7 @@ def UncommonChars(s, x):
                         return i
                     continue
                 else:
-                    break
-
-        
+                    break        
     if i==len(a)-1:return -1
 
-
-print(UncommonChars("charaacacters" , "ac"))
+print(strstr("charaacacters" , "ac"))
