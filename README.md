@@ -1,2 +1,2 @@
 # 100-days-of-code
-Collection of LeetCode questions to ace the coding interview!
+Collection of questions to ace the coding interview! and also just dsa etc
