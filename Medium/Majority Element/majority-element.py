@@ -1,7 +1,8 @@
 #User function template for Python 3
 
 class Solution:
-    def majorityElement(self, A, N):
+    def majorityElement(self, arr, N):
+        '''
         f = {}
         for i in A:
             if i not in f:
@@ -9,11 +10,32 @@ class Solution:
             else:
                 f[i]+=1
         nf = sorted(f.items(), key=lambda x: x[1], reverse = True)
-        if nf[0][1] > N/2:
+        if nf[0][1] > int(N/2):
             return nf[0][0]
         return -1
+        '''
+        el = -1
+        votes = 0
+        for i in range (N):
+            if (votes == 0):
+                el = arr[i]
+                votes = 1
+            else:
+                if (arr[i] == el):
+                    votes += 1
+                else:
+                    votes -= 1
+        count = 0
         
-
+        for i in range (N):
+            if (arr[i] == el):
+                count += 1
+                 
+        if (count > N // 2):
+            return el
+        else:
+            return -1
+    
 
 #{ 
  # Driver Code Starts
