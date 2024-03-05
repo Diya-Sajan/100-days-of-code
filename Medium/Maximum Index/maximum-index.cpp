@@ -10,33 +10,21 @@ class Solution{
     // A[]: input array
     // N: size of array
     // Function to find the maximum index difference.
-    int maxIndexDiff(int arr[], int n) 
+    int maxIndexDiff(int a[], int n) 
     { 
-        // Your code here
-        int lmin[n], rmax[n];
-        lmin[0] = arr[0];
-        for (int i=1; i<n; i++){
-            lmin[i] = min(arr[i], lmin[i-1]);
+        vector<pair<int,int>> pa;
+        for(int i=0; i<n; i++){
+            pa.push_back({a[i],i});
         }
-        
-        rmax[n-1] = arr[n-1];
-        for (int i=n-2; i>=0; i--){
-            rmax[i] = max(arr[i], rmax[i+1]);
+        sort(pa.begin(),pa.end());
+        vector<int> suf(n,pa[n-1].second);
+        int maxi=0;
+        for(int i=n-2; i>=0; i--){
+            int r=pa[i].second;
+            suf[i]=max(suf[i+1],r);
+            maxi=max(maxi,suf[i]-r);
         }
-        
-        int i=0, j=0;
-        int res = -1;
-        while(i<n and j<n){
-            if (lmin[i] <= rmax[j]){
-                res = max(res, j-i);
-                j++;
-            }else{
-                i++;
-            }
-        }
-        
-        return res;
-        
+        return maxi;
     }
 };
 
