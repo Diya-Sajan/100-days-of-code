@@ -7,24 +7,18 @@ public:
         int i=0, j=0;
         while(i<m && j<n){
             if(nums1[i]<=nums2[j]){
-                ans.push_back(nums1[i]);
-                i++;
+                ans.push_back(nums1[i++]);
             }
             else{
-                ans.push_back(nums2[j]);
-                j++;
+                ans.push_back(nums2[j++]);
             }
         }
         while(i<m){
-            ans.push_back(nums1[i]);
-            i++;
+            ans.push_back(nums1[i++]);
         }
         while(j<n){
-            ans.push_back(nums2[j]);
-            j++;
+            ans.push_back(nums2[j++]);
         }
-
-
         swap(nums1,ans);
     }
 };
