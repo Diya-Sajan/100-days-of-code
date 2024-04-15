@@ -1,20 +1,20 @@
 #User function Template for python3
 class Solution:
-
+    ##Complete this function
+    #Function to rearrange  the array elements alternately.
     def rearrange(self,arr, n): 
-
-        fst=0
-        lst=n-1
-        maxi=arr[lst]+1
-        for i in range(n):
-            if i%2==0:
-                arr[i]+=(arr[lst]%maxi)*maxi
-                lst-=1
-            else:
-                arr[i]+=(arr[fst]%maxi)*maxi
-                fst+=1
-        for i in range(n):
-            arr[i]//=maxi
+        res = []
+        if(n<=1):
+            return arr
+        i=1
+        for i in range(1,(n//2)+1):
+            res.append(arr[-i])
+            res.append(arr[i-1])
+        if(n%2!=0):
+            res.append(arr[-(i+1)])
+        
+        arr[:]=res[:]
+            
 
 
 #{ 
