@@ -4,6 +4,9 @@ using namespace std;
 
 
 // } Driver Code Ends
+
+#include<algorithm>
+using namespace std;
 class Solution{
     public:
     
@@ -11,9 +14,10 @@ class Solution{
     void rotateArr(int arr[], int d, int n){
         // code here
         int temp[n];
-        for(int i=0; i<n; i++){
-            temp[i] = arr[i];
-        }
+        copy(arr+0,arr+n, temp);
+    //    for(int i=0; i<n; i++){
+  //          temp[i] = arr[i];
+//        }
         for(int i=0; i<n; i++){
             arr[i] = temp[(i+d)%n];
         }
@@ -21,6 +25,7 @@ class Solution{
         
     }
 };
+
 
 //{ Driver Code Starts.
 
