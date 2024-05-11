@@ -1,21 +1,46 @@
 class Solution {
+private:
+    bool check(int a[26], int b[26]){
+        for(int i=0; i<26; i++){
+            if(a[i]!=b[i])
+                return 0;
+        }
+        return 1;
+    }
 public:
     bool checkInclusion(string s1, string s2) {
-        vector<int> subV (26,0);
-        vector<int> srcV (26,0);
-        for(auto c:s1) subV[c-'a']++;
+        int count1[26] = {0};
 
-        int right = 0;
-        int left = 0;
-        while(right < s2.length()){
-            srcV[s2[right]-'a']++;
-            if(right-left+1 == s1.length()){
-                if(subV == srcV) return true;
-                srcV[s2[left]-'a']--;
-                left++;
-            }
-            right ++;
+        for(int i=0; i<s1.length(); i++){
+            int index = s1[i]-'a';
+            count1[index]++;
         }
-        return false;
+
+        int i=0;
+        int wins = s1.length();
+        int count2[26] = {0};
+
+        while(i<wins && i<s2.length()){
+            int index = s2[i] - 'a';
+            count2[index]++;
+            i++;
+        }
+        if(check(count1,count2))
+            return 1;
+
+        while(i<s2.length()){
+            char newch = s2[i];
+            int index = newch - 'a';
+            count2[index]++;
+
+            char oldch = s2[i-wins];
+            index = oldch - 'a';
+            count2[index]--;
+            i++;
+
+            if(check(count1,count2))
+            return 1;
+        }
+        return 0;
     }
 };
