@@ -1,4 +1,4 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1?page=3&category=Arrays&sortBy=submissions">Spirally traversing a matrix</a></h2><h3>Difficulty Level : Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a&nbsp;matrix&nbsp;of size r*c. Traverse the matrix in spiral form.</span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1">Spirally traversing a matrix</a></h2><h3>Difficulty Level : Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a&nbsp;matrix&nbsp;of size r*c. Traverse the matrix in spiral form.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
