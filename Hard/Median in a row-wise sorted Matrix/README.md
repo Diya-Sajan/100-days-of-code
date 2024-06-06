@@ -1,4 +1,4 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1?page=1&difficulty=Hard&status=unsolved&sortBy=submissions">Median in a row-wise sorted Matrix</a></h2><h3>Difficulty Level : Hard</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a row wise sorted matrix of size <strong>R*C</strong>&nbsp;where R&nbsp;and C&nbsp;are always <strong>odd</strong>,&nbsp;find the median of the matrix.</span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1">Median in a row-wise sorted Matrix</a></h2><h3>Difficulty Level : Hard</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a row wise sorted matrix of size <strong>R*C</strong>&nbsp;where R&nbsp;and C&nbsp;are always <strong>odd</strong>,&nbsp;find the median of the matrix.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -34,5 +34,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 <p><br>
 <span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= R, C&nbsp;&lt;= 400<br>
-1 &lt;= matrix[i][j] &lt;= 2000</span></p>
-</div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Matrix</code>&nbsp;<code>Binary Search</code>&nbsp;<code>Data Structures</code>&nbsp;<code>Algorithms</code>&nbsp;
+1 &lt;= matrix[i][j] &lt;= 2000</span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Matrix</code>&nbsp;<code>Binary Search</code>&nbsp;<code>Data Structures</code>&nbsp;<code>Algorithms</code>&nbsp;
