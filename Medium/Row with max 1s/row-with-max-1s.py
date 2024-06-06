@@ -3,14 +3,14 @@ class Solution:
 
 	def rowWithMax1s(self,arr, n, m):
 		# code here
-		maxx = 0
-		res=-1
-		for i in range(n):
-		    a = sum(arr[i])
-		    if a>maxx:
-		        maxx=a
-		        res=i
-	    return res
+		res = -1
+		maxi = 0;
+		for i in range (n):
+		    if sum(arr[i])>maxi:
+		        maxi = sum(arr[i])
+		        res = i;
+		        
+		return res
 
 
 #{ 
