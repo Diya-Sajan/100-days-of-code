@@ -17,35 +17,31 @@ class Solution
 {
     public:
     //Function to sort an array using quick sort algorithm.
-    void quickSort(int arr[], int low, int high)
-    {
+    void quickSort(int ar[], int low, int high){
         if(low<high){
-            int p=partition(arr, low, high);
-            quickSort(arr, low, p-1);
-            quickSort(arr, p+1, high);
+            int pivInd = func(ar,low,high);
+    
+            quickSort(ar,low,pivInd-1);
+            quickSort(ar,pivInd+1,high);
         }
     }
     
     public:
-    
-    int partition(int arr[], int low, int high){
-        int pivot = low;
-        int i=low;
-        int j=high;
-        
-        while(i<j){
-            while(arr[i]<=arr[pivot]){
-                i++;
-            }
-            while(arr[j]>arr[pivot]){
-                j--;
-            }
-            if(i<j){
-                swap(arr[j], arr[i]);
-            }
+    int func(int ar[], int low, int high){
+    int pivot = ar[low];
+    int i=low;
+    int j=high;
+    while(i<j){
+        while(ar[i]<=pivot && i<=high-1){
+            i++;
         }
-        swap(arr[j], arr[pivot]);
-        return j;
+        while(ar[j]>pivot && j>=low+1){
+            j--;
+        }
+        if(i<j){swap(ar[i],ar[j]);}
+    }
+    swap(ar[low],ar[j]);
+    return j;
     }
 };
 
