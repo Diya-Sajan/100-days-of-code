@@ -1,6 +1,13 @@
 class Solution:
-    def rotate(self, nums: List[int], l: int) -> None:
-        lennn = len(nums)
-        k = (len(nums)-l)%lennn
-        nums[:]= nums[k:]+nums[:k]
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n = len(nums)
+        k = k % n
+        if k == 0:
+            return
         
+        flag = nums[-k:]
+        nums[k:] = nums[:-k]
+        nums[:k] = flag
