@@ -4,10 +4,13 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         n = len(nums)
-        k = k % n
+        # i = i % n
+        # if i == 0:
+        #     return
+        
+        # flag = nums[-k:]
+        k = k % len(nums)
         if k == 0:
             return
         
-        flag = nums[-k:]
-        nums[k:] = nums[:-k]
-        nums[:k] = flag
+        nums[:]=nums[-k:]+nums[:-k]
