@@ -1,13 +1,8 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        n= len(nums)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        pair = {}
 
-        for i in range(n-1):
-            for j in range(i+1,n):
-                if i!=j:
-                    if nums[i] + nums[j] == target :
-                        return [i,j]
-        return []
-
-
-        
+        for i,num in enumerate(nums):
+            if target-num in pair:
+                return [i,pair[target-num]]
+            pair[num] = i
